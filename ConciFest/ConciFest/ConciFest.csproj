@@ -1,0 +1,604 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props" Condition="Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" />
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{AD70F0B4-2940-47B0-95AB-BB8751528E96}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>ConciFes</RootNamespace>
+    <AssemblyName>ConciFes</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <UseIISExpress>true</UseIISExpress>
+    <Use64BitIISExpress />
+    <IISExpressSSLPort>44311</IISExpressSSLPort>
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <UseGlobalApplicationHostFile />
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.Bcl.AsyncInterfaces, Version=1.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Bcl.AsyncInterfaces.1.1.0\lib\net461\Microsoft.Bcl.AsyncInterfaces.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="Stripe.net, Version=41.20.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Stripe.net.41.20.0\lib\net461\Stripe.net.dll</HintPath>
+    </Reference>
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Runtime.CompilerServices.Unsafe, Version=4.0.4.1, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Runtime.CompilerServices.Unsafe.4.5.2\lib\netstandard2.0\System.Runtime.CompilerServices.Unsafe.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Runtime.InteropServices.RuntimeInformation, Version=4.0.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Runtime.InteropServices.RuntimeInformation.4.3.0\lib\net45\System.Runtime.InteropServices.RuntimeInformation.dll</HintPath>
+      <Private>True</Private>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Threading.Tasks.Extensions, Version=4.2.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Threading.Tasks.Extensions.4.5.2\lib\netstandard2.0\System.Threading.Tasks.Extensions.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="Microsoft.Web.Infrastructure, Version=2.0.1.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.Web.Infrastructure.2.0.1\lib\net40\Microsoft.Web.Infrastructure.dll</HintPath>
+    </Reference>
+    <Reference Include="AspNet.ScriptManager.jQuery">
+      <HintPath>..\packages\AspNet.ScriptManager.jQuery.3.4.1\lib\net45\AspNet.ScriptManager.jQuery.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ScriptManager.MSAjax">
+      <HintPath>..\packages\Microsoft.AspNet.ScriptManager.MSAjax.5.0.0\lib\net45\Microsoft.ScriptManager.MSAjax.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ScriptManager.WebForms">
+      <HintPath>..\packages\Microsoft.AspNet.ScriptManager.WebForms.5.0.0\lib\net45\Microsoft.ScriptManager.WebForms.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Optimization, Version=1.1.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35">
+      <HintPath>..\packages\Microsoft.AspNet.Web.Optimization.1.1.3\lib\net40\System.Web.Optimization.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>..\packages\Newtonsoft.Json.12.0.2\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="WebGrease">
+      <Private>True</Private>
+      <HintPath>..\packages\WebGrease.1.6.0\lib\WebGrease.dll</HintPath>
+    </Reference>
+    <Reference Include="Antlr3.Runtime">
+      <Private>True</Private>
+      <HintPath>..\packages\Antlr.3.5.0.2\lib\Antlr3.Runtime.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AspNet.Web.Optimization.WebForms">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.Web.Optimization.WebForms.1.1.3\lib\net45\Microsoft.AspNet.Web.Optimization.WebForms.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AspNet.FriendlyUrls">
+      <HintPath>..\packages\Microsoft.AspNet.FriendlyUrls.Core.1.0.2\lib\net45\Microsoft.AspNet.FriendlyUrls.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.CodeDom.Providers.DotNetCompilerPlatform">
+      <HintPath>..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\lib\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Admin\Ayarlar.aspx" />
+    <Content Include="Admin\css\style.css" />
+    <Content Include="Admin\Default.aspx" />
+    <Content Include="Admin\gulpfile.js" />
+    <Content Include="Admin\images\dashboard\circle.svg" />
+    <Content Include="Admin\images\dashboard\img_1.jpg" />
+    <Content Include="Admin\images\dashboard\img_2.jpg" />
+    <Content Include="Admin\images\dashboard\img_3.jpg" />
+    <Content Include="Admin\images\dashboard\img_4.jpg" />
+    <Content Include="Admin\images\faces-clipart\pic-1.png" />
+    <Content Include="Admin\images\faces-clipart\pic-2.png" />
+    <Content Include="Admin\images\faces-clipart\pic-3.png" />
+    <Content Include="Admin\images\faces-clipart\pic-4.png" />
+    <Content Include="Admin\images\faces\face1.jpg" />
+    <Content Include="Admin\images\faces\face10.jpg" />
+    <Content Include="Admin\images\faces\face11.jpg" />
+    <Content Include="Admin\images\faces\face12.jpg" />
+    <Content Include="Admin\images\faces\face13.jpg" />
+    <Content Include="Admin\images\faces\face14.jpg" />
+    <Content Include="Admin\images\faces\face15.jpg" />
+    <Content Include="Admin\images\faces\face16.jpg" />
+    <Content Include="Admin\images\faces\face17.jpg" />
+    <Content Include="Admin\images\faces\face18.jpg" />
+    <Content Include="Admin\images\faces\face19.jpg" />
+    <Content Include="Admin\images\faces\face2.jpg" />
+    <Content Include="Admin\images\faces\face20.jpg" />
+    <Content Include="Admin\images\faces\face21.jpg" />
+    <Content Include="Admin\images\faces\face22.jpg" />
+    <Content Include="Admin\images\faces\face23.jpg" />
+    <Content Include="Admin\images\faces\face24.jpg" />
+    <Content Include="Admin\images\faces\face25.jpg" />
+    <Content Include="Admin\images\faces\face26.jpg" />
+    <Content Include="Admin\images\faces\face27.jpg" />
+    <Content Include="Admin\images\faces\face3.jpg" />
+    <Content Include="Admin\images\faces\face4.jpg" />
+    <Content Include="Admin\images\faces\face5.jpg" />
+    <Content Include="Admin\images\faces\face6.jpg" />
+    <Content Include="Admin\images\faces\face7.jpg" />
+    <Content Include="Admin\images\faces\face8.jpg" />
+    <Content Include="Admin\images\faces\face9.jpg" />
+    <Content Include="Admin\images\faces\onurkya7.png" />
+    <Content Include="Admin\images\favicon.png" />
+    <Content Include="Admin\images\logo-mini.svg" />
+    <Content Include="Admin\images\logo.svg" />
+    <Content Include="Admin\js\chart.js" />
+    <Content Include="Admin\js\dashboard.js" />
+    <Content Include="Admin\js\file-upload.js" />
+    <Content Include="Admin\js\misc.js" />
+    <Content Include="Admin\js\off-canvas.js" />
+    <Content Include="Admin\pages\charts\chartjs.html" />
+    <Content Include="Admin\pages\forms\basic_elements.html" />
+    <Content Include="Admin\pages\icons\mdi.html" />
+    <Content Include="Admin\pages\samples\blank-page.html" />
+    <Content Include="Admin\pages\samples\error-404.html" />
+    <Content Include="Admin\pages\samples\error-500.html" />
+    <Content Include="Admin\pages\samples\login.html" />
+    <Content Include="Admin\pages\samples\register.html" />
+    <Content Include="Admin\pages\tables\basic-table.html" />
+    <Content Include="Admin\pages\ui-features\buttons.html" />
+    <Content Include="Admin\pages\ui-features\typography.html" />
+    <Content Include="Admin\PaketEkle.aspx" />
+    <Content Include="Admin\PaketDuzenle.aspx" />
+    <Content Include="Admin\partials\_footer.html" />
+    <Content Include="Admin\partials\_navbar.html" />
+    <Content Include="Admin\partials\_sidebar.html" />
+    <Content Include="Admin\PlanDuzenle.aspx" />
+    <Content Include="Admin\PlanEkle.aspx" />
+    <Content Include="Admin\SanatciDuzenle.aspx" />
+    <Content Include="Admin\SanatciEkle.aspx" />
+    <Content Include="Admin\screenshot.jpg" />
+    <Content Include="Admin\vendors\css\vendor.bundle.base.css" />
+    <Content Include="Admin\vendors\iconfonts\mdi\css\materialdesignicons.css" />
+    <Content Include="Admin\vendors\iconfonts\mdi\css\materialdesignicons.min.css" />
+    <Content Include="Admin\vendors\iconfonts\mdi\fonts\materialdesignicons-webfont.svg" />
+    <Content Include="Admin\vendors\iconfonts\mdi\preview.html" />
+    <Content Include="Admin\vendors\js\vendor.bundle.addons.js" />
+    <Content Include="Admin\vendors\js\vendor.bundle.base.js" />
+    <Content Include="BuyPacket.aspx" />
+    <Content Include="BuyTicket.aspx" />
+    <Content Include="Content\bootstrap-grid.css" />
+    <Content Include="Content\bootstrap-grid.min.css" />
+    <Content Include="Content\bootstrap-grid.rtl.css" />
+    <Content Include="Content\bootstrap-grid.rtl.min.css" />
+    <Content Include="Content\bootstrap-reboot.css" />
+    <Content Include="Content\bootstrap-reboot.min.css" />
+    <Content Include="Content\bootstrap-reboot.rtl.css" />
+    <Content Include="Content\bootstrap-reboot.rtl.min.css" />
+    <Content Include="Content\bootstrap-utilities.css" />
+    <Content Include="Content\bootstrap-utilities.min.css" />
+    <Content Include="Content\bootstrap-utilities.rtl.css" />
+    <Content Include="Content\bootstrap-utilities.rtl.min.css" />
+    <Content Include="Content\bootstrap.css" />
+    <Content Include="Content\bootstrap.min.css" />
+    <Content Include="Content\bootstrap.rtl.css" />
+    <Content Include="Content\bootstrap.rtl.min.css" />
+    <Content Include="css\consibootstrap-icons.css" />
+    <Content Include="css\consibootstrap.min.css" />
+    <Content Include="css\consifest.css" />
+    <Content Include="Default.aspx" />
+    <Content Include="favicon.ico" />
+    <Content Include="Global.asax" />
+    <Content Include="images\artists\abstral-official-bdlMO9z5yco-unsplash.jpg" />
+    <Content Include="images\artists\joecalih-UmTZqmMvQcw-unsplash.jpg" />
+    <Content Include="images\artists\soundtrap-rAT6FJ6wltE-unsplash.jpg" />
+    <Content Include="images\edward-unsplash-blur.jpg" />
+    <Content Include="images\guitar.png" />
+    <Content Include="images\icons\logout.png" />
+    <Content Include="images\icons\facebook.png" />
+    <Content Include="images\icons\google.png" />
+    <Content Include="images\nainoa-shizuru-unsplash-blur.jpg" />
+    <Content Include="images\nicholas-green-unsplash-blur.jpg" />
+    <Content Include="images\pexels-alexander-suhorucov-6457579.jpg" />
+    <Content Include="images\plan\ceza-konser.jpg" />
+    <Content Include="images\plan\festival-konya.jpg" />
+    <Content Include="images\plan\hadise-konser.jpeg" />
+    <Content Include="images\plan\muratboz-konser.jpg" />
+    <Content Include="images\plan\oguzhankoc-konser.jpg" />
+    <Content Include="images\profiles\ağ canlı ders soru.png" />
+    <Content Include="images\profiles\pp.jpg" />
+    <Content Include="js\bootstrap.min.js" />
+    <Content Include="js\click-scroll.js" />
+    <Content Include="js\custom.js" />
+    <Content Include="js\jquery.min.js" />
+    <Content Include="js\jquery.sticky.js" />
+    <Content Include="LoginPage.aspx" />
+    <Content Include="Payment.aspx" />
+    <Content Include="Profile.aspx" />
+    <Content Include="RegisterPage.aspx" />
+    <Content Include="Scripts\bootstrap.bundle.js" />
+    <Content Include="Scripts\bootstrap.bundle.min.js" />
+    <Content Include="Scripts\bootstrap.esm.js" />
+    <Content Include="Scripts\bootstrap.esm.min.js" />
+    <Content Include="Scripts\bootstrap.js" />
+    <Content Include="Scripts\bootstrap.min.js" />
+    <Content Include="Scripts\bootstrap.min.js.map" />
+    <Content Include="Scripts\bootstrap.js.map" />
+    <Content Include="Scripts\bootstrap.esm.min.js.map" />
+    <Content Include="Scripts\bootstrap.esm.js.map" />
+    <Content Include="Scripts\bootstrap.bundle.min.js.map" />
+    <Content Include="Scripts\bootstrap.bundle.js.map" />
+    <Content Include="Content\bootstrap.rtl.min.css.map" />
+    <Content Include="Content\bootstrap.rtl.css.map" />
+    <Content Include="Content\bootstrap.min.css.map" />
+    <Content Include="Content\bootstrap.css.map" />
+    <Content Include="Content\bootstrap-utilities.rtl.min.css.map" />
+    <Content Include="Content\bootstrap-utilities.rtl.css.map" />
+    <Content Include="Content\bootstrap-utilities.min.css.map" />
+    <Content Include="Content\bootstrap-utilities.css.map" />
+    <Content Include="Content\bootstrap-reboot.rtl.min.css.map" />
+    <Content Include="Content\bootstrap-reboot.rtl.css.map" />
+    <Content Include="Content\bootstrap-reboot.min.css.map" />
+    <Content Include="Content\bootstrap-reboot.css.map" />
+    <Content Include="Content\bootstrap-grid.rtl.min.css.map" />
+    <Content Include="Content\bootstrap-grid.rtl.css.map" />
+    <Content Include="Content\bootstrap-grid.min.css.map" />
+    <Content Include="Content\bootstrap-grid.css.map" />
+    <Content Include="fonts\bootstrap-icons.woff" />
+    <Content Include="fonts\bootstrap-icons.woff2" />
+    <Content Include="Admin\Admin.Master" />
+    <Content Include="Admin\css\maps\style.css.map" />
+    <Content Include="Admin\fonts\.DS_Store" />
+    <Content Include="Admin\fonts\Ubuntu\.DS_Store" />
+    <Content Include="Admin\fonts\Ubuntu\Ubuntu-Bold.eot" />
+    <Content Include="Admin\fonts\Ubuntu\Ubuntu-Bold.ttf" />
+    <Content Include="Admin\fonts\Ubuntu\Ubuntu-Bold.woff" />
+    <Content Include="Admin\fonts\Ubuntu\Ubuntu-Bold.woff2" />
+    <Content Include="Admin\fonts\Ubuntu\Ubuntu-Light.eot" />
+    <Content Include="Admin\fonts\Ubuntu\Ubuntu-Light.ttf" />
+    <Content Include="Admin\fonts\Ubuntu\Ubuntu-Light.woff" />
+    <Content Include="Admin\fonts\Ubuntu\Ubuntu-Light.woff2" />
+    <Content Include="Admin\fonts\Ubuntu\Ubuntu-Medium.eot" />
+    <Content Include="Admin\fonts\Ubuntu\Ubuntu-Medium.ttf" />
+    <Content Include="Admin\fonts\Ubuntu\Ubuntu-Medium.woff" />
+    <Content Include="Admin\fonts\Ubuntu\Ubuntu-Medium.woff2" />
+    <Content Include="Admin\fonts\Ubuntu\Ubuntu-Regular.eot" />
+    <Content Include="Admin\fonts\Ubuntu\Ubuntu-Regular.ttf" />
+    <Content Include="Admin\fonts\Ubuntu\Ubuntu-Regular.woff" />
+    <Content Include="Admin\fonts\Ubuntu\Ubuntu-Regular.woff2" />
+    <Content Include="Admin\images\.DS_Store" />
+    <Content Include="Admin\images\dashboard\.DS_Store" />
+    <Content Include="Admin\images\faces\.DS_Store" />
+    <Content Include="Admin\js\.DS_Store" />
+    <Content Include="Admin\PSD\Purple_dashboard_free.psd" />
+    <Content Include="Admin\scss\.DS_Store" />
+    <Content Include="Admin\scss\components\.DS_Store" />
+    <Content Include="Admin\scss\components\_badges.scss" />
+    <Content Include="Admin\scss\components\_bootstrap-progress.scss" />
+    <Content Include="Admin\scss\components\_buttons.scss" />
+    <Content Include="Admin\scss\components\_cards.scss" />
+    <Content Include="Admin\scss\components\_checkbox-radio.scss" />
+    <Content Include="Admin\scss\components\_dropdown.scss" />
+    <Content Include="Admin\scss\components\_forms.scss" />
+    <Content Include="Admin\scss\components\_icons.scss" />
+    <Content Include="Admin\scss\components\_lists.scss" />
+    <Content Include="Admin\scss\components\_preview.scss" />
+    <Content Include="Admin\scss\components\_tables.scss" />
+    <Content Include="Admin\scss\landing-screens\_auth.scss" />
+    <Content Include="Admin\scss\mixins\.DS_Store" />
+    <Content Include="Admin\scss\mixins\_animation.scss" />
+    <Content Include="Admin\scss\mixins\_background.scss" />
+    <Content Include="Admin\scss\mixins\_badges.scss" />
+    <Content Include="Admin\scss\mixins\_blockqoute.scss" />
+    <Content Include="Admin\scss\mixins\_buttons.scss" />
+    <Content Include="Admin\scss\mixins\_cards.scss" />
+    <Content Include="Admin\scss\mixins\_misc.scss" />
+    <Content Include="Admin\scss\style.scss" />
+    <Content Include="Admin\scss\_background.scss" />
+    <Content Include="Admin\scss\_demo.scss" />
+    <Content Include="Admin\scss\_fonts.scss" />
+    <Content Include="Admin\scss\_footer.scss" />
+    <Content Include="Admin\scss\_functions.scss" />
+    <Content Include="Admin\scss\_misc.scss" />
+    <Content Include="Admin\scss\_navbar.scss" />
+    <Content Include="Admin\scss\_reset.scss" />
+    <Content Include="Admin\scss\_sidebar.scss" />
+    <Content Include="Admin\scss\_typography.scss" />
+    <Content Include="Admin\scss\_utilities.scss" />
+    <Content Include="Admin\scss\_variables.scss" />
+    <Content Include="Admin\vendors\iconfonts\mdi\bower.json" />
+    <Content Include="Admin\vendors\iconfonts\mdi\css\materialdesignicons.css.map" />
+    <Content Include="Admin\vendors\iconfonts\mdi\css\materialdesignicons.min.css.map" />
+    <Content Include="Admin\vendors\iconfonts\mdi\fonts\materialdesignicons-webfont.eot" />
+    <Content Include="Admin\vendors\iconfonts\mdi\fonts\materialdesignicons-webfont.ttf" />
+    <Content Include="Admin\vendors\iconfonts\mdi\fonts\materialdesignicons-webfont.woff" />
+    <Content Include="Admin\vendors\iconfonts\mdi\fonts\materialdesignicons-webfont.woff2" />
+    <Content Include="Admin\vendors\iconfonts\mdi\license.md" />
+    <Content Include="Admin\vendors\iconfonts\mdi\package.json" />
+    <Content Include="Admin\vendors\iconfonts\mdi\README.md" />
+    <Content Include="Admin\vendors\iconfonts\mdi\scss\materialdesignicons.scss" />
+    <Content Include="Admin\vendors\iconfonts\mdi\scss\_animated.scss" />
+    <Content Include="Admin\vendors\iconfonts\mdi\scss\_core.scss" />
+    <Content Include="Admin\vendors\iconfonts\mdi\scss\_extras.scss" />
+    <Content Include="Admin\vendors\iconfonts\mdi\scss\_functions.scss" />
+    <Content Include="Admin\vendors\iconfonts\mdi\scss\_icons.scss" />
+    <Content Include="Admin\vendors\iconfonts\mdi\scss\_path.scss" />
+    <Content Include="Admin\vendors\iconfonts\mdi\scss\_variables.scss" />
+    <Content Include="Admin\.DS_Store" />
+    <Content Include="Admin\.gitignore" />
+    <Content Include="Admin\CHANGELOG.md" />
+    <Content Include="Admin\package-lock.json" />
+    <Content Include="Admin\package.json" />
+    <Content Include="Admin\README.md" />
+    <Content Include="GuestPage.Master" />
+    <Content Include="MemberPage.Master" />
+    <None Include="Scripts\jquery-3.4.1.intellisense.js" />
+    <Content Include="Scripts\jquery-3.4.1.js" />
+    <Content Include="Scripts\jquery-3.4.1.min.js" />
+    <Content Include="Scripts\jquery-3.4.1.slim.js" />
+    <Content Include="Scripts\jquery-3.4.1.slim.min.js" />
+    <Content Include="Scripts\modernizr-2.8.3.js" />
+    <Content Include="Scripts\WebForms\DetailsView.js" />
+    <Content Include="Scripts\WebForms\Focus.js" />
+    <Content Include="Scripts\WebForms\GridView.js" />
+    <Content Include="Scripts\WebForms\Menu.js" />
+    <Content Include="Scripts\WebForms\MenuStandards.js" />
+    <Content Include="Scripts\WebForms\MSAjax\MicrosoftAjax.js" />
+    <Content Include="Scripts\WebForms\MSAjax\MicrosoftAjaxApplicationServices.js" />
+    <Content Include="Scripts\WebForms\MSAjax\MicrosoftAjaxComponentModel.js" />
+    <Content Include="Scripts\WebForms\MSAjax\MicrosoftAjaxCore.js" />
+    <Content Include="Scripts\WebForms\MSAjax\MicrosoftAjaxGlobalization.js" />
+    <Content Include="Scripts\WebForms\MSAjax\MicrosoftAjaxHistory.js" />
+    <Content Include="Scripts\WebForms\MSAjax\MicrosoftAjaxNetwork.js" />
+    <Content Include="Scripts\WebForms\MSAjax\MicrosoftAjaxSerialization.js" />
+    <Content Include="Scripts\WebForms\MSAjax\MicrosoftAjaxTimer.js" />
+    <Content Include="Scripts\WebForms\MSAjax\MicrosoftAjaxWebForms.js" />
+    <Content Include="Scripts\WebForms\MSAjax\MicrosoftAjaxWebServices.js" />
+    <Content Include="Scripts\WebForms\SmartNav.js" />
+    <Content Include="Scripts\WebForms\TreeView.js" />
+    <Content Include="Scripts\WebForms\WebForms.js" />
+    <Content Include="Scripts\WebForms\WebParts.js" />
+    <Content Include="Scripts\WebForms\WebUIValidation.js" />
+    <Content Include="Uye.aspx" />
+    <Content Include="video\pex1.mp4" />
+    <Content Include="ViewSwitcher.ascx" />
+    <Content Include="Web.config" />
+    <Content Include="Bundle.config" />
+    <Content Include="Webhooks.ashx" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Admin\Admin.Master.cs">
+      <DependentUpon>Admin.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\Admin.Master.designer.cs">
+      <DependentUpon>Admin.Master</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\Ayarlar.aspx.cs">
+      <DependentUpon>Ayarlar.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\Ayarlar.aspx.designer.cs">
+      <DependentUpon>Ayarlar.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\Default.aspx.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\Default.aspx.designer.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\PaketEkle.aspx.cs">
+      <DependentUpon>PaketEkle.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\PaketEkle.aspx.designer.cs">
+      <DependentUpon>PaketEkle.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\PaketDuzenle.aspx.cs">
+      <DependentUpon>PaketDuzenle.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\PaketDuzenle.aspx.designer.cs">
+      <DependentUpon>PaketDuzenle.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\PlanDuzenle.aspx.cs">
+      <DependentUpon>PlanDuzenle.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\PlanDuzenle.aspx.designer.cs">
+      <DependentUpon>PlanDuzenle.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\PlanEkle.aspx.cs">
+      <DependentUpon>PlanEkle.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\PlanEkle.aspx.designer.cs">
+      <DependentUpon>PlanEkle.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\SanatciDuzenle.aspx.cs">
+      <DependentUpon>SanatciDuzenle.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\SanatciDuzenle.aspx.designer.cs">
+      <DependentUpon>SanatciDuzenle.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\SanatciEkle.aspx.cs">
+      <DependentUpon>SanatciEkle.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\SanatciEkle.aspx.designer.cs">
+      <DependentUpon>SanatciEkle.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="App_Start\BundleConfig.cs" />
+    <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="BuyPacket.aspx.cs">
+      <DependentUpon>BuyPacket.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="BuyPacket.aspx.designer.cs">
+      <DependentUpon>BuyPacket.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="BuyTicket.aspx.cs">
+      <DependentUpon>BuyTicket.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="BuyTicket.aspx.designer.cs">
+      <DependentUpon>BuyTicket.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Default.aspx.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Default.aspx.designer.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="GuestPage.Master.cs">
+      <DependentUpon>GuestPage.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="GuestPage.Master.designer.cs">
+      <DependentUpon>GuestPage.Master</DependentUpon>
+    </Compile>
+    <Compile Include="Payment.aspx.cs">
+      <DependentUpon>Payment.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Payment.aspx.designer.cs">
+      <DependentUpon>Payment.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Webhooks.ashx.cs">
+      <DependentUpon>Webhooks.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="zKontrol.cs" />
+    <Compile Include="LoginPage.aspx.cs">
+      <DependentUpon>LoginPage.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="LoginPage.aspx.designer.cs">
+      <DependentUpon>LoginPage.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="MemberPage.Master.cs">
+      <DependentUpon>MemberPage.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MemberPage.Master.designer.cs">
+      <DependentUpon>MemberPage.Master</DependentUpon>
+    </Compile>
+    <Compile Include="Profile.aspx.cs">
+      <DependentUpon>Profile.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Profile.aspx.designer.cs">
+      <DependentUpon>Profile.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="RegisterPage.aspx.cs">
+      <DependentUpon>RegisterPage.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="RegisterPage.aspx.designer.cs">
+      <DependentUpon>RegisterPage.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Uye.aspx.cs">
+      <DependentUpon>Uye.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Uye.aspx.designer.cs">
+      <DependentUpon>Uye.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ViewSwitcher.ascx.cs">
+      <DependentUpon>ViewSwitcher.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ViewSwitcher.ascx.designer.cs">
+      <DependentUpon>ViewSwitcher.ascx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="App_Data\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
+    <Content Include="Scripts\jquery-3.4.1.slim.min.map" />
+    <Content Include="Scripts\jquery-3.4.1.min.map" />
+    <None Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+    <None Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>61626</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>https://localhost:44311/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props'))" />
+  </Target>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
