@@ -25,8 +25,7 @@ Some pages of the website:
 ## Technologies Used
 
 ### Backend:
-- ASP.NET Core
-- Entity Framework Core
+- ASP.NET 
 
 ### Frontend:
 - HTML5
