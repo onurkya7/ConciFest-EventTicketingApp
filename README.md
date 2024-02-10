@@ -1,6 +1,6 @@
 # ConciFest-EventTicketingApp
 
-ConciFest is a web platform where users can find information about concerts, festivals, and other live music events, including location, time, and ticket sales. This platform not only provides detailed information about events but also enables users to purchase tickets easily and securely and interact with artists through special packages.
+ConciFest, concerts, festivals, and live music events hub. Find event details, buy tickets securely, and engage with artists through special packages.
 
 ## Project Objectives
 
@@ -11,7 +11,16 @@ ConciFest is a web platform where users can find information about concerts, fes
 
 ## Screenshots
 
-...
+Some pages of the website:
+
+![as3](https://github.com/onurkya7/ConciFest-EventTicketingApp/assets/100594545/6696010b-6fbc-4113-9cd8-b5bcd78b9d40)
+
+
+![profil](https://github.com/onurkya7/ConciFest-EventTicketingApp/assets/100594545/f78792b8-dede-41ab-924c-68fa9ce9f9a2)
+
+
+![ödeme](https://github.com/onurkya7/ConciFest-EventTicketingApp/assets/100594545/d16e7f40-6857-4c3a-9ad0-8ffb357b2099)
+
 
 ## Technologies Used
 
@@ -50,6 +59,6 @@ ConciFest is a web platform where users can find information about concerts, fes
 
 ## License
 
-This project is licensed under the Apache License 2.0. See the `LICENSE` file for more information.
+This project is licensed under the [Apache License 2.0](LICENSE). For more information, see the [LICENSE](LICENSE) file.
 
 
