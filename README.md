@@ -43,11 +43,22 @@ Some pages of the website:
 
 ## Installation
 
-1. Clone the project to your computer.
-2. Open the project in Visual Studio Code or your preferred IDE.
-3. Install necessary dependencies to run the project (ASP.NET Core SDK).
-4. Create the database connection and run migrations to create the necessary tables.
-5. Start the project.
+1. Clone the repository:
+
+    ```bash
+    git clone https://github.com/onurkya7/ConciFest-EventTicketingApp.git
+    ```
+
+2. Navigate to the project directory:
+
+    ```bash
+    cd ConciFest-EventTicketingApp
+    ```
+
+3. Open the project in your preferred IDE.
+4. Install dependencies (ASP.NET Core SDK).
+5. Set up the database connection and run migrations.
+6. Start the project.
 
 ## Contributing
 
