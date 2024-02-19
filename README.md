@@ -37,7 +37,7 @@ Some pages of the website:
 - Microsoft SQL Server
 
 ### Other Tools:
-- Visual Studio Code
+- Visual Studio 
 - Adobe Photoshop
 
 ## Installation
