@@ -56,7 +56,22 @@ Some pages of the website:
 3. Open the project in your preferred IDE.
 4. Install dependencies (ASP.NET Core SDK).
 5. Set up the database connection and run migrations.
-6. Start the project.
+---
+
+5.1 Move the database file sql in the database directory.
+
+![Ekran görüntüsü 2024-04-17 134432](https://github.com/onurkya7/ConciFest-EventTicketingApp/assets/100594545/630a4e3c-7a66-4e7b-801a-019a5f8257d4)
+
+5.2 Copy the SQL server name, username and password from which you log in to SQL.
+
+![image](https://github.com/onurkya7/ConciFest-EventTicketingApp/assets/100594545/29c73a08-d35b-4bce-a485-646437414067)
+
+5.3 Add the copied information to the appropriate places in the Web.config file in the section shown in the image.
+
+---
+
+
+7. Start the project.
 
 ## Contributing
 
