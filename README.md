@@ -21,6 +21,12 @@ Some pages of the website:
 
 ![ödeme](https://github.com/onurkya7/ConciFest-EventTicketingApp/assets/100594545/d16e7f40-6857-4c3a-9ad0-8ffb357b2099)
 
+## System Architecture
+
+ConciFest follows a layered architecture:
+- Presentation Layer (HTML, CSS, Bootstrap, JavaScript)
+- Application Layer (ASP.NET Controllers & Services)
+- Data Access Layer (Entity Framework & SQL Server)
 
 ## Technologies Used
 
